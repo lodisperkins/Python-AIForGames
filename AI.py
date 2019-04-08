@@ -2,6 +2,7 @@ class Node:
 
     def __init__(self,newdata):
         self.data = newdata
+        self.parent = None
 
 class Edge:
 
@@ -17,33 +18,25 @@ class Graph:
         self.initializegraph()
 
     def initializegraph(self):
-        i = 0
-        while i <self.nodes.count:
-            j=0
-            while j < self.nodes.count:
-                if(j == i):
-                    j+=1
-                else:
-                    self.edges.append(Edge(nodes[i],nodes[j]))
-                    j+=1
-            i+=1
+      for i in nodes:
+          for j in range [0,nodes.count]:
+              if(nodes[j]==I):
+                  continue
+              else:
+                  self.edges.append(Edge(i,nodes[j]))
+
+    def adjacentedges(node):
+        adedges = []
+        for i in edges:
+            if(i.start == node):
+                adedges.append(i)
+        return adedges
+
+
+    
+def bfs(graph,startnode):
+    discovered=[]
 
 
 
-node1 = Node(1)
-node2 = Node(2)
-node3 = Node(3)
 
-nodes = []
-nodes.append(node1)
-nodes.append(node2)
-nodes.append(node3)
-
-mygraph = Graph(nodes)
-
-iterator = mygraph.nodes[0]
-print (iterator.data)
-iterator = mygraph.edges[0].end
-print (iterator.data)
-iterator = iterator.edges[2].end
-print (iterator.data)
