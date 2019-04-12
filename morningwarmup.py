@@ -8,6 +8,9 @@ def distance(p1=[],p2=[]):
     for value in vals:
         number +=value
     return math.sqrt(number)
+def insidebox(pos,rect):
+    if pos.X>rect.topleft.X and pos.Y < rect.topleft.Y and pos.X < rect.bottomright.X and pos.Y > rect.bottomright.Y:
+        return true
 point1 =[]
 point1.append(1)
 point1.append(2)
